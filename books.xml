@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<bean id="book" class="co.lofongi.inherit.Book">
+		<property name="name" value="Java Core"></property>
+		<property name="author" value="Jefry Johns"></property>
+		<property name="numOfPages" value="2000"></property>
+		<property name="cost" value="29.29"></property>
+	</bean>
+	<bean id="ebook" class="co.lofongi.inherit.EBook" parent="book">
+		<property name="sizeInMB" value="45.6"></property>
+	</bean>
+</beans>
