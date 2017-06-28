@@ -25,6 +25,35 @@
 	<bean id="usr" class="co.lofongi.first.User">
 		<property name="car" ref="car"></property>
 	</bean>
+	
+	<!--  <bean id="stud" class="co.lofongi.first.Student" autowire="byName"> -->
+	<!-- <bean id="stud" class="co.lofongi.first.Student" autowire="byType">
+		<property name="name" value="Jonny"></property>
+		<property name="id" value="5987"></property> -->
+		<!-- we don't need to write -->
+		<!--<property name="hostel" ref="host"></property> 
+	</bean>-->
+	<!-- id should be the same as in class student hostel field -->
+	<!--<bean id="hostel" class="co.lofongi.first.Hostel">-->
+	<!--<bean id="Hostel" class="co.lofongi.first.Hostel">
+		<property name="hostelBName" value="Welcome"></property>
+		<property name="city" value="Lviv"></property>
+	</bean>-->
+	
+	 <bean id="stud" class="co.lofongi.first.Student" autowire="constructor">
+		<constructor-arg name="name" value="Jonny"></constructor-arg>
+		<constructor-arg name="id" value="5987"></constructor-arg>
+
+	</bean>
+
+
+	<bean id="Hostel" class="co.lofongi.first.Hostel">
+		<property name="hostelBName" value="Welcome"></property>
+		<property name="city" value="Lviv"></property>
+	</bean>
+	
+	
+	
 </beans>
 
 
