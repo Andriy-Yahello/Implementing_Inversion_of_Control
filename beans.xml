@@ -12,6 +12,19 @@
 		<property name="firstname" value="Sam"></property>
 		<property name="lastName" value="Few"></property>
 	</bean>
+	
+	
+	
+	
+	<bean id="car" class="co.lofongi.first.Car">
+		<property name="name" value="BMW 760Li perfomence"></property>
+		<property name="perDayCost" value="1000"></property>
+	</bean>
+	
+	<!-- injecting the dependency -->
+	<bean id="usr" class="co.lofongi.first.User">
+		<property name="car" ref="car"></property>
+	</bean>
 </beans>
 
 
